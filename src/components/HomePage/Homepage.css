@@ -1,0 +1,210 @@
+.homepage-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow: hidden; /* Ensures no content overflows the screen */
+}
+
+.top-nav {
+  background-color: #333;
+  color: white;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  box-sizing: border-box;
+}
+
+.top-nav-left h1 {
+  margin: 0;
+  font-size: 1.5rem;
+  white-space: nowrap; /* Prevents text from wrapping to a new line */
+  overflow: hidden;
+  text-overflow: ellipsis; /* Ensures text truncation if it overflows */
+}
+
+.top-nav-right {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0; /* Prevents the right section from shrinking */
+}
+
+.nav-icon {
+  margin-left: 15px; /* Reduced margin for better fit */
+  font-size: 24px;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .top-nav-left h1 {
+    font-size: 1.2rem;
+  }
+
+  .nav-icon {
+    font-size: 20px;
+    margin-left: 10px;
+  }
+}
+
+@media (max-width: 576px) {
+  .top-nav-left h1 {
+    font-size: 1rem;
+  }
+
+  .nav-icon {
+    font-size: 18px;
+    margin-left: 8px;
+  }
+
+  .top-nav-right {
+    justify-content: space-around; /* Distributes space evenly around icons */
+  }
+}
+
+@media (max-width: 400px) {
+  .top-nav-left h1 {
+    display: none; /* Hides the title to give space for icons on very small screens */
+  }
+
+  .nav-icon {
+    font-size: 16px;
+    margin-left: 5px;
+  }
+}
+
+
+.main-content {
+  display: flex;
+  flex: 1;
+  padding-top: 60px; /* Offset for fixed top navigation */
+  overflow: hidden;
+}
+
+.side-nav {
+  width: 200px;
+  background-color: #f4f4f4;
+  padding-top: 60px; /* Offset for fixed top navigation */
+  overflow-y: auto; /* Allows scrolling if content overflows */
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 98%;
+  z-index: 900;
+  transition: width 0.3s ease-in-out; /* Smooth transition for responsiveness */
+}
+
+.side-nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.side-nav ul li {
+  margin: 15px 0;
+  text-align: center;
+}
+
+.side-nav ul li a {
+  text-decoration: none;
+  color: #333;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #ddd;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s, box-shadow 0.3s;
+  height: 90px;
+  width: 90px;
+  margin: 0 auto;
+}
+
+.side-nav ul li a:hover {
+  background-color: #f0f0f0;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.side-nav ul li a .svg-inline--fa {
+  margin-bottom: 8px;
+  font-size: 24px;
+}
+
+.side-nav ul li a span {
+  font-size: 14px;
+}
+
+.content {
+  margin-left: 220px;
+  padding-top: 70px;
+  padding: 20px;
+  flex-grow: 1;
+  background-color: #fff;
+  overflow-y: auto; /* Ensures the main content area can scroll if it overflows */
+}
+
+@media (max-width: 768px) {
+  .side-nav {
+    width: 150px;
+  }
+
+  .side-nav ul li a {
+    height: 80px;
+    width: 80px;
+  }
+
+  .content {
+    margin-left: 160px;
+  }
+}
+
+@media (max-width: 576px) {
+  .top-nav-left h1 {
+    font-size: 1.2rem;
+  }
+
+  .side-nav {
+    width: 100px;
+  }
+
+  .side-nav ul li a {
+    height: 60px;
+    width: 60px;
+    font-size: 12px;
+  }
+
+  .nav-icon {
+    margin-left: 10px;
+    font-size: 20px;
+  }
+
+  .content {
+    margin-left: 120px;
+  }
+}
+
+@media (max-width: 200px) {
+  .top-nav-right {
+    display: none; /* Hides the top nav icons on very small screens */
+  }
+
+  .side-nav {
+    width: 80px;
+  }
+
+  .side-nav ul li a {
+    height: 50px;
+    width: 50px;
+    font-size: 10px;
+  }
+
+  .content {
+    margin-left: 100px;
+  }
+}

@@ -1,0 +1,184 @@
+/* General styles for the Party module */
+.party-container {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+h2 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.button-container {
+  display: flex;
+  justify-content: flex-end; /* Aligns items to the end of the container */
+}
+
+/* Styles for the Add Party button */
+.add-party-btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px; /* Adjusted padding */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.add-party-btn:hover {
+  background-color: #45a049;
+}
+
+/* Modal header */
+.modal-header {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #333;
+}
+
+/* Form layout */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Increased gap between form elements */
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Form row */
+.form-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+/* Form group (half-width fields) */
+.form-group {
+  flex: 1;
+  min-width: 100px;
+}
+
+/* Full-width fields */
+.form-group.full-width {
+  flex-basis: 100%;
+}
+
+/* Input fields styling */
+input, textarea {
+  width: 90%;
+  padding: 12px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+/* Label styling */
+label {
+  font-weight: bold;
+  margin-bottom: 10px; /* Added margin to separate labels from input fields */
+  font-size: 14px;
+  color: #555;
+}
+
+/* Submit button styling */
+button[type="submit"] {
+  background-color: #007BFF;
+  color: white;
+  padding: 12px 20px; /* Adjusted padding for better spacing */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+/* Styles for the Cancel button */
+.cancel-btn {
+  background-color: #f44336;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+.cancel-btn:hover {
+  background-color: #d32f2f;
+}
+
+/* Styles for the Party List */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+table, th, td {
+  border: 1px solid #ddd;
+}
+
+th, td {
+  padding: 12px;
+  text-align: left;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+tr:hover {
+  background-color: #f1f1f1;
+}
+
+/* Styles for buttons in the Party List */
+table button {
+  background-color: #008CBA;
+  color: white;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+table button:hover {
+  background-color: #006f9a;
+}
+
+/* Styles for Party View */
+.party-view p {
+  margin: 10px 0;
+}
+
+.party-view button {
+  margin-top: 20px;
+  background-color: #f44336;
+  color: white;
+  padding: 10px 20px; /* Adjusted padding for better spacing */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.party-view button:hover {
+  background-color: #d32f2f;
+}
+
+.party-list thead {
+  margin-top: 20px; /* Adjust the value as needed */
+}
